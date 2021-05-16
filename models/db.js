@@ -1,6 +1,7 @@
 const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
-const dbUri = "mongodb+srv://admin:Kore123@cluster0.1fqlf.mongodb.net/nailit?retryWrites=true&w=majority";
+var config = require("../sigmaConfig.json");
+const dbUri = config.dbConnectionUri;
 
 mongoose.connect(dbUri,{useNewUrlParser: true, useUnifiedTopology: true});
 
